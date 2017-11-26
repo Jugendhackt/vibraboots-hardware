@@ -3,14 +3,15 @@
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
 
-const char* ssid = "Jugend hackt";
+const char* ssid = "navshoes";
+const char* password = "jugendhackt";
 const char* side = "right";
 
 ESP8266WebServer server(1841);
 
 void setup(void){
   WiFi.hostname("right");
-  WiFi.begin(ssid);
+  WiFi.begin(ssid, password);
   Serial.begin(9600);
 
   pinMode(LED_BUILTIN, OUTPUT);
